@@ -1,0 +1,64 @@
+
+/* Reiknum stærð á öllum boxum sem border-box */
+
+html {
+  box-sizing: border-box;
+}
+
+/* og látum erfast á allt */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.sr-only:not(:focus) {
+  display: none;
+}
+
+.sr-only:not(:active) {
+  display: none;
+}
+
+/*** Allt meginmál notar open sans ***/
+html,
+input,
+select,
+button {
+  font-family: var(--font-family-base);
+}
+
+/*** Allar fyrirsagnir nota Matemasie regular ***/
+h1,
+h2,
+h3,
+legend {
+  font-family: var(--font-family-heading);
+}
+
+/** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
+img {
+  max-width: 100%;
+}
+
+/** Litur á hlekkjum erfist frá foreldri **/
+a {
+  color: inherit;
+}
+
+/** „Til baka á forsíðu“ hlekkur **/
+.back {
+  margin-top: var(--spacing);
+}
